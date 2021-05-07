@@ -1,0 +1,28 @@
+<h3>Messages</h3>
+<table class="pre">
+    <thead>
+        <tr>
+            <th>Subject</th>
+            <th>From/To</th>
+        </tr>
+    </thead>
+    <tbody>
+        % for mail in mails:
+            % unread = "font-weight: bold" if not mail.read else ""
+            % current = "inverse" if mail.id == selected_message else ""
+            <tr class="{{ current }}">
+                <td style="{{ unread }}" data-label="Subject">
+                    <a href="/view/message/{{ mail.id }}/">
+                        {{ mail.subject }}
+                    </a>
+                </td>
+                <td style="{{ unread }}" data-label="From/To">
+                    <a href="/view/message/{{ mail.id }}/">
+                        From: {{ mail.sender }}<br>
+                        To: {{ mail.reciever }}<br>
+                    </a>
+                </td>
+            </tr>
+        % end
+    </tbody>
+</table>

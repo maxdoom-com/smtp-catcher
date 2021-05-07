@@ -1,0 +1,8 @@
+% for part in message.object.walk():
+    % if part.get_content_type() == 'text/html':
+        <h3>{{ part.get_content_type() }} <small><a href="/view/html/{{message.id}}/" target="_blank">open in new tab</a></small></h3>
+        <div class="pre">
+            <iframe src="/view/html/{{message.id}}/" style="width:100%" frameborder="0" scrolling="no" onload="resizeIframe(this)" ></iframe>
+        </div>
+    % end
+% end

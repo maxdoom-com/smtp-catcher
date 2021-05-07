@@ -1,0 +1,8 @@
+% for part in message.object.walk():
+    % if part.get_content_type() == 'text/plain':
+        <h3>{{ part.get_content_type() }} (as undecoded string)</h3>
+        <section>
+            <pre>{{ part.as_string() }}</pre>
+        </section>
+    % end
+% end

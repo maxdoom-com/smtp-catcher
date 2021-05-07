@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    % include("_html_header")
+</head>
+<body>
+    <header class="sticky">
+        <a href="/" class="logo"><span class="icon-mail"></span> SMTP-Catcher</a>
+        <a href="/purge/" class="button"><span class="icon-alert"></span> Purge</a>
+    </header>
+    <main class="row">
+        <aside class="col-sm-12 col-md-12 col-lg-6">
+            % include("_table", mails=mails, selected_message=selected_message)
+            % include("_form")
+        </aside>
+        <article class="col-sm-12 col-md-12 col-lg-6">
+            % include("_message", message=message)
+        </article>
+    </main>
+</body>
+</html>

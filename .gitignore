@@ -1,0 +1,4 @@
+env/
+__pycache__/
+mail.db
+_git

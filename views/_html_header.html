@@ -1,0 +1,69 @@
+<% 
+##
+## Common HTML-Header
+##
+%>
+
+<meta charset="utf-8">
+<title>SMTP-Catcher</title>
+<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.png">
+<link rel="stylesheet" href="/static/mini-nord.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<% 
+##
+## CREDITS:
+## - Iframe-Resizing: https://stackoverflow.com/a/9976309/1560436
+##
+%>
+<script>
+    function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+    }
+</script>
+
+<style type="text/css">
+    /* additional classes */
+    .pre {
+        overflow: auto;
+        /*background: var(--secondary-back-color);*/
+        padding: calc(1.5 * var(--universal-padding));
+        margin: var(--universal-margin);
+        border: .0625rem solid var(--secondary-border-color);
+        border-left: .25rem solid var(--pre-color);
+        border-radius: 0 var(--universal-border-radius) var(--universal-border-radius) 0;
+    }
+    .scrolled40rem {
+        max-height: 40rem;
+        overflow: auto;
+    }
+    /* global overrides */
+    body {
+        background: white;
+    }
+    th, td {
+        padding: 0.2rem !important;
+    }
+    tr.inverse th, tr.inverse td {
+        color: var(--table-body-back-color);
+        background: var(--table-body-fore-color);
+    }
+    tr a,
+    tr a:link,
+    tr a:visited {
+        color: var(--table-body-fore-color);
+    }
+    tr.inverse a {
+        color: var(--table-body-back-color);
+    }
+    table:not(.horizontal) {
+        max-height: unset;
+    }
+    form.pre {
+        background: white;
+    }
+    h3 small {
+        display: inline-block;
+    }
+</style>

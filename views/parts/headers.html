@@ -1,0 +1,11 @@
+<h3>Headers</h3>
+<table class="pre">
+    <tbody>
+        % for key, value in message.object.items():
+            <tr>
+                <th>{{key}}</th>
+                <td data-label="{{key}}">{{value}}</td>
+            </tr>
+        % end
+    </tbody>
+</table>

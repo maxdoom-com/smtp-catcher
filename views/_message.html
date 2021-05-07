@@ -1,0 +1,48 @@
+% if not message:
+    <h3>&nbsp;</h3>
+    <div class="pre">
+        <p><b>No message selected!</b></p>
+    </div>
+% else:
+
+    % if error:
+        <h3>Error</h3>
+        <div class="pre">
+            <p><b>Error: {{error}}</b></p>
+        </div>
+    % end
+<%
+    accepted_encodings = [
+        "text/plain",
+        "text/html",
+        "image/png",
+        "image/jpeg",
+        "image/gif",
+        "multipart/alternative",
+        "multipart/mixed",
+    ]
+
+    include("parts/headers")
+
+    if not error:
+        include("parts/text_plain")
+        include("parts/text_html")
+        include("parts/image_png")
+        include("parts/image_jpeg")
+        include("parts/image_gif")
+        include("parts/multipart_alternative")
+        include("parts/multipart_mixed")
+        include("parts/other")
+        include("parts/raw")
+    else:
+        include("parts/text_plain_as_string")
+        include("parts/text_html")
+        include("parts/image_png")
+        include("parts/image_jpeg")
+        include("parts/image_gif")
+        include("parts/multipart_alternative")
+        include("parts/multipart_mixed")
+        include("parts/other")
+        include("parts/raw")
+%>
+% end

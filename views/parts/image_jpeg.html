@@ -1,0 +1,8 @@
+% for part in message.object.walk():
+    % if part.get_content_type() == 'image/jpeg':
+        <h3>{{ part.get_content_type() }}</h3>
+        <section class="pre">
+            <img src="data:image/jpeg;base64,{{! part.get_payload() }}" />
+        </section>
+    % end
+% end
