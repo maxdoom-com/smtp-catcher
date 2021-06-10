@@ -112,7 +112,7 @@ def purge():
     return redirect('/')
 
 
-@route('/send-test/')
+@route('/send-test/', method='POST')
 def send_test():
     """sends a test mail"""
     host = request.forms.get('host', '127.0.0.1')
