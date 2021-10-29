@@ -21,4 +21,4 @@ And this is, how it looks like:
 
 It works with python3.6 upward. It's been tested only with python3.9 .
 
-It requires not external libraries except bottle.py. A version of bottle.py is included.
+It requires no external libraries except bottle.py. A version of bottle.py is included.
